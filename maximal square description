@@ -1,0 +1,7 @@
+Problem description:
+Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+
+Solution:
+Use dynamic programming to solve this problem, define a matrix: dp, s.t dp[i][j] is the side length of a square that matrix[i][j] can form from two directions: up and left.
+if matrix[i][j] = '0', there is no possibility for this point to form a square, it remains 0.
+if matrix[i][j] = '1', dp[i][j] is at least 1. And if dp[i][j] != 0, it is possible for point matrix[i][j] to form a square whose side is 1 greater than the side length of square point matrix[i-1][j-1] forms, and we need to test the vertical and horizontal line who intersect at point matrix[i][j], to check if they are all 1. If so, dp[i][j] = dp[i-1][j-1]+1, if not, dp[i][j] will get a value where the loop breaks. Meanwhile, use a "maxSide" to dynamicly update the possible maximal length, after the iteration to the "dp" matrix finishes, "maxSide" will be the largest side length the input matrix can have. 
