@@ -1,5 +1,5 @@
 public class Solution {
-private List<List<Integer>> res = new ArrayList<List<Integer>>();
+    private List<List<Integer>> res = new ArrayList<List<Integer>>();
     public List<List<Integer>> findSubsequences(int[] nums) {
         if(nums == null || nums.length == 0) return res;
 
