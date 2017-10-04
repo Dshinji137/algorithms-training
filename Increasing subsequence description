@@ -1,9 +1,0 @@
-Problem description:
-Given an integer array, find all the different possible increasing subsequences of the given array, and the length of an increasing 
-subsequence should be at least 2 .
-The given array may contain duplicates, and two equal integers should also be considered as a special case of increasing sequence.
-
-Solutions:
-(1) Iterate every element, each as a starting point (reference), use a HashMap to avoid duplicate. 
-(2) Then check each element after the reference point to decide whether it is a unique (also use HashMap to check) increasing subsequence. 
-Recursively implement the process, use a list of list to record the result.
