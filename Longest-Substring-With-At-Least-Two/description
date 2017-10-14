@@ -1,0 +1,13 @@
+Given a string, find the length of the longest substring T that contains at most 2 distinct characters.
+For example, Given s = “eceba”,
+T is "ece" which its length is 3.
+
+
+Solution:
+Iterate through the string, denote the position of string as i, maintain several variables, to record:
+(1) What these two distinct characters are;
+(2) What is the largest index of these two characters;
+(3) The smallest index that the sub string in this index to current index to meet the two-distinct-character requirement, denoted as start. 
+
+In each iteration, update the max length as maxlen = max(maxlen, i-start+1)
+
